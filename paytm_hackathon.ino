@@ -77,16 +77,18 @@ void setup() {
   
 }
 
-void callLift(){
-  m2a(); 
-  delay(2000);
-}
-
 void drop(){
   m2c(); 
   delay(2000);
   sweep();
 }
+
+void callLift(){
+  m2a(); 
+  delay(5000);
+  drop();  
+}
+
 
 // the loop routine runs over and over ag+ain forever:
 void loop() {
@@ -110,13 +112,12 @@ void loop() {
     callLift();
   }
  
-  val2 = digitalRead(inPin2); 
-  if(val2 == HIGH){
-   
-  }else {
-     //m2c(); 
-  
-    //drop();
-  }
+//  val2 = digitalRead(inPin2); 
+//  if(val2 == HIGH){
+//   
+//  }else {
+//    
+//    //drop();
+//  }
 
 }
